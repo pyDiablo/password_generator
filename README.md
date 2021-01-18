@@ -5,3 +5,6 @@ Script to generate a password of a given length and copy it to the clipboard.
 You'll just need **pyperclip** for this to work. You can install it using:
 
 `pip install pyperclip`
+
+### To Do
+* Add CLI support
