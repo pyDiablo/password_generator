@@ -20,7 +20,6 @@ def generate_password(length):
     """ Generates a password of a given length and copies it to the clipboard """
 
     password = ''
-    print(len(CHARACTER_SET))
     for i in range(length):
         num = random.randint(0, len(CHARACTER_SET) - 1)  # Creates a random integer between 0 and 83 (both inclusive)
         password += CHARACTER_SET[num]  # Appends a random character from character set to the end of the password
