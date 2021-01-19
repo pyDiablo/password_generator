@@ -42,6 +42,9 @@ def main(length=None):
         except ValueError:
             print("Error: password's length should be an integer!")  # Print this if user enters any value other than integer
         else:
+            # If user enters a negative integer
+            if password_length < 0:
+                password_length *= -1
             print('Generating...')
             password = generate_password(password_length)
             print(password)
@@ -53,6 +56,9 @@ def main(length=None):
         except ValueError:
             print("Error: password's length should be an integer!")  # Print this if user enters any value other than integer
         else:
+            # If user enters a negative integer
+            if password_length < 0:
+                password_length *= -1
             print('Generating...')
             password = generate_password(password_length)
             print(password)
