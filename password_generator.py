@@ -18,7 +18,7 @@ CHARACTER_SET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890,
 
 
 def generate_password(length):
-    """ Generates a password of a given length and copies it to the clipboard """
+    """ Generates a password of a given length """
 
     password = ''
     for i in range(length):
