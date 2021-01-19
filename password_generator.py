@@ -2,6 +2,7 @@
 
     Password Generator
     Written by: @pyDiablo
+    Help Provided by: u/JohnnyJordaan and u/CommonConsistent525
 
     Generates a password of a given length
     and copies it to the clipboard.
