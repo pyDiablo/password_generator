@@ -8,7 +8,7 @@
 
 """
 
-import random
+import secrets
 import pyperclip
 import sys
 
@@ -20,11 +20,7 @@ CHARACTER_SET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890,
 def generate_password(length):
     """ Generates a password of a given length """
 
-    password = ''
-    for i in range(length):
-        num = random.randint(0, len(CHARACTER_SET) - 1)  # Creates a random integer between 0 and 83 (both inclusive)
-        password += CHARACTER_SET[num]  # Appends a random character from character set to the end of the password
-    return password
+    return ''.join(secrets.choice(CHARACTER_SET) for _ in range(length))
 
 
 def copy_to_clipboard(some_string):
@@ -35,34 +31,24 @@ def copy_to_clipboard(some_string):
 
 
 def main(length=None):
-    # When no argument is provided
-    if length is None:
-        try:
+    try:
+        # When no argument is provided
+        if length is None:
             password_length = int(input('\nPassword length: '))  # Length of password to be generated
-        except ValueError:
-            print("Error: password's length should be an integer!")  # Print this if user enters any value other than integer
+        # When argument is provided
         else:
-            # If user enters a negative integer
-            if password_length < 0:
-                password_length *= -1
-            print('Generating...')
-            password = generate_password(password_length)
-            print(password)
-            copy_to_clipboard(password)
-    # When argument is provided
-    else:
-        try:
             password_length = int(length)
-        except ValueError:
-            print("Error: password's length should be an integer!")  # Print this if user enters any value other than integer
-        else:
-            # If user enters a negative integer
-            if password_length < 0:
-                password_length *= -1
-            print('Generating...')
-            password = generate_password(password_length)
-            print(password)
-            copy_to_clipboard(password)
+    except ValueError:
+        print("Error: password's length should be an integer!")  # Print this if user enters any value other than integer
+        return
+
+    # If user enters a negative integer
+    if password_length < 0:
+        password_length *= -1
+    print('Generating...')
+    password = generate_password(password_length)
+    print(password)
+    copy_to_clipboard(password)
 
 
 if __name__ == '__main__':
