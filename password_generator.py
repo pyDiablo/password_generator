@@ -34,11 +34,15 @@ def copy_to_clipboard(some_string):
 
 
 def main():
-    password_length = int(input('\nPassword length: '))  # Length of password to be generated
-    print('Generating...')
-    password = generate_password(length=password_length)
-    print(password)
-    copy_to_clipboard(password)
+    try:
+        password_length = int(input('\nPassword length: '))  # Length of password to be generated
+    except ValueError:
+        print("Error: password's length should be an integer!")  # Print this if user enters any value other than integer
+    else:
+        print('Generating...')
+        password = generate_password(length=password_length)
+        print(password)
+        copy_to_clipboard(password)
 
 
 if __name__ == '__main__':
