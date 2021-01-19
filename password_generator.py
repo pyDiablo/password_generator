@@ -26,13 +26,19 @@ def generate_password(length):
     return password
 
 
+def copy_to_clipboard(some_string):
+    """ Copies the given string to clipboard """
+
+    pyperclip.copy(some_string)  # Copy password to clipboard using pyperclip
+    print('Password copied to clipboard!')
+
+
 def main():
     password_length = int(input('\nPassword length: '))  # Length of password to be generated
     print('Generating...')
     password = generate_password(length=password_length)
     print(password)
-    pyperclip.copy(password)  # Copy password to clipboard
-    print('Password copied to clipboard!')
+    copy_to_clipboard(password)
 
 
 if __name__ == '__main__':
