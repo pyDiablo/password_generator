@@ -1,17 +1,31 @@
 # Password Generator
+
+![Image](https://i.imgur.com/MLnTnI3.png)
+
 Script to generate a password of a given length and copy it to the clipboard.
 
-### Requirements
-You'll just need **pyperclip** for this to work. You can install it using:
+### Instructions
 
-`pip install pyperclip`
+1) Install **pyperclip** using:
 
-### What's new
-Added CLI support
+    pip install pyperclip
 
-You can now generate passwords right through your terminal by entering the following:
+2) Clone this repo
 
-`python password_generator.py {password_length_here}`
+3) cd into *password_generator* directory using:
 
+    cd password_generator
+
+4) To run the password generator, enter the following in the terminal: 
+
+    python password_generator.py {password_length_here}
+    
+   or just enter:
+   
+    python password_generator.py
+    
 ### To Do
-- [x] ~~Add CLI support~~
+
+- [x] ~~Add CLI Support~~
+    
+
