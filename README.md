@@ -1,6 +1,6 @@
 # Password Generator
 
-![Image](https://i.imgur.com/MLnTnI3.png)
+![Image](https://github.com/pyDiablo/password_generator/blob/main/screenshot.png)
 
 Script to generate a password of a given length and copy it to the clipboard.
 
