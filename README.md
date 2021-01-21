@@ -1,6 +1,6 @@
 # Password Generator
 
-![Image](./screenshot.png)
+![Image](./screenshot.png?raw=true)
 
 Script to generate a password of a given length and copy it to the clipboard.
 
