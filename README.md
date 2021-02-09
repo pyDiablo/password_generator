@@ -21,11 +21,11 @@ Script to generate a password of a given length and copy it to the clipboard.
 
 4) To run the password generator, enter the following in the terminal:
 
-       python password_generator.py {password_length_here}
+       python p_gen.py {password_length_here}
 
    or just enter:
 
-       python password_generator.py
+       python p_gen.py
 
 ### To Do
 
